@@ -1,7 +1,41 @@
 import React from 'react'
 import Shoes_card from './Shoes_card'
 import Image from 'next/image'
+import { IconName, TfiArrowCircleRight, TfiFaceSmile } from "react-icons/tfi";
+import DraggableSlider from './Slider_page';
 
+const items = [
+    {
+        Name: 'CACTUS',
+        image: '/./Sneaker_one.jpeg', 
+        price: "$240 USD",
+        discount:"$144 USD"
+    },
+    {
+        Name: 'THE EYE',
+        image: '/./Sneaker_two.jpeg', 
+        price: "$240 USD",
+        discount:"$144 USD"
+    },
+    {
+        Name: 'DURAN',
+        image: '/./Sneaker_three.jpeg', 
+        price: "$240 USD",
+        discount:"$144 USD"
+    },
+    {
+        Name: 'THE CODE',
+        image: '/./Sneaker_foru.jpeg', 
+        price: "$240 USD",
+        discount:"$144 USD"
+    },
+    {
+        Name: 'CARNERA',
+        image: '/./Sneaker_five.jpeg', 
+        price: "$240 USD",
+        discount:"$144 USD"
+    },
+];
 const Bottom_page = () => {
     return (
         <section >
@@ -13,67 +47,16 @@ const Bottom_page = () => {
                 from a convergence of arts and personalities</p>
             </div>
             <ul className=' flex justify-around'>
-            <li className='border-2 flex flex-col items-center justify-around w-1/5 border-blacktosummer text-blacktosummer bg-beige'>
-                <Image
-                src="/./shoe.png"
-                alt="Sneaker"
-                width={200} 
-                height={150}
-                />
-                <Shoes_card
-                forwho='Unisex'
-                sizes='ss/20'
-                shoe='DURAN'
-                price='$50.00'
-                rprice='$65.00'
-                />
-            </li>
-            <li className='border-2 flex flex-col items-center justify-around w-1/5 border-blacktosummer text-blacktosummer bg-beige'>
-                <Image
-                src="/./shoe.png"
-                alt="Sneaker"
-                width={200} 
-                height={150}
-                />
-                <Shoes_card
-                forwho='Unisex'
-                sizes='ss/20'
-                shoe='DURAN'
-                price='$50.00'
-                rprice='$65.00'
-                />
-            </li>
-            <li className='border-2 flex flex-col items-center justify-around w-1/5 border-blacktosummer text-blacktosummer bg-beige'>
-                <Image
-                src="/./shoe.png"
-                alt="Sneaker"
-                width={200} 
-                height={150}
-                />
-                <Shoes_card
-                forwho='Unisex'
-                sizes='ss/20'
-                shoe='DURAN'
-                price='$50.00'
-                rprice='$65.00'
-                />
-            </li>
-            <li className='border-2 flex flex-col items-center justify-around w-1/5 border-blacktosummer text-blacktosummer bg-beige'>
-                <Image
-                src="/./shoe.png"
-                alt="Sneaker"
-                width={200} 
-                height={150}
-                />
-                <Shoes_card
-                forwho='Unisex'
-                sizes='ss/20'
-                shoe='DURAN'
-                price='$50.00'
-                rprice='$65.00'
-                />
-            </li>
+                <DraggableSlider items={items} />
             </ul>
+            <a className='flex justify-end mt-2 mb-1  '>
+                <p className='flex items-center text-xl justify-around w-1/5 px-4 cursor-pointer text-blacktosummer group  '>
+                    SHOP ALL
+                    <TfiFaceSmile className='text-5xl rounded-full transition duration-500 group-hover:bg-yellow p-2'/>
+                </p>
+            </a>
+
+            
         </section>
     )
 }
