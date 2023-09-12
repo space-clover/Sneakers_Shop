@@ -23,7 +23,7 @@ render() {
             <Slider {...sliderSettings}>
             {items.map((item, index) => (
                 <ul key={index} className="p-6 cursor-grab active:cursor-grabbing">
-                    <li className="bg-beige  border-2 border-blacktosummer text-blacktosummer pt-12 justify-around flex flex-col items-center h-50vh w-full">
+                    <li className="bg-beige  border-2 border-blacktosummer text-blacktosummer pt-12 justify-around flex flex-col items-center h-60vh w-full">
                         <div className='flex items-end justify-center h-40'>                       
                         <Image
                         src={item.image}
